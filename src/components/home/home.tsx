@@ -55,9 +55,6 @@ class Home extends React.Component<IProps, IState> {
         this.setState({
           popularMovies: movies,
         });
-
-        console.log("This is in state ", this.state.popularMovies);
-        console.log("This is in 1st value ", this.state.popularMovies[0].title);
       });
   };
 
@@ -68,15 +65,10 @@ class Home extends React.Component<IProps, IState> {
       )
       .then((res) => {
         let movies: movie[] = res.data.results;
-        console.log("This the res ", movies);
+
         this.setState({
           topRatedMovies: movies,
         });
-
-        console.log(
-          "This is in Top Rated Movies state ",
-          this.state.topRatedMovies
-        );
       });
   };
 
@@ -87,22 +79,16 @@ class Home extends React.Component<IProps, IState> {
       )
       .then((res) => {
         let movies: movie[] = res.data.results;
-        console.log("This the res ", movies);
+
         this.setState({
           upcomingMovies: movies,
         });
-
-        console.log(
-          "This is in Upcoming Movies state ",
-          this.state.upcomingMovies
-        );
       });
   };
 
   render() {
     return (
       <div className="home">
-        <h1>Home</h1>
         <h1>Popular Movies</h1>
         <Slider movies={this.state.popularMovies} />
         <h1>Upcoming Movies</h1>

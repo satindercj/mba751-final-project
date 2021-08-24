@@ -7,8 +7,8 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./components/home/home";
-import Search from "./components/search";
-import Settings from "./components/settings";
+import Search from "./components/search/search";
+import Settings from "./components/settings/settings";
 
 function App() {
   const [value, setValue] = useState(0);
