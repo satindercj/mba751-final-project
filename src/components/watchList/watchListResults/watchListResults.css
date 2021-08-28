@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css?family=Kalam");
+
+.results {
+  padding-top: 3rem;
+  margin-left: 20px;
+  color: white;
+}
+
+.results__poster {
+  object-fit: contain;
+  max-height: 100px;
+  margin: 20px;
+  transition: transform 450ms;
+}
+
+.results__posterLarge {
+  max-height: 250px;
+  border-radius: 10px;
+}
+
+.results__posterLarge:hover {
+  transform: scale(1.09);
+}
+
+.results__poster:hover {
+  transform: scale(1.08);
+}
+
+.defaultPrompt {
+  margin-top: 6rem;
+  font-family: "Kalam";
+  font-size: 2.25rem;
+  color: #747879;
+}

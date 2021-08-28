@@ -1,10 +1,10 @@
 import React from "react";
-import { movie } from "../home/home";
-import Movie from "../movie/movie";
-import "./slider.css";
-import defaultPoster from "../../images/defaultPoster.jpg";
+import { movie } from "../../home/home";
+import Movie from "../../movie/movie";
+import "./searchResults.css";
+import defaultPoster from "../../../images/defaultPoster.jpg";
 
-export default function Slider(props: any) {
+export default function SearchResults(props: any) {
   const [open, setOpen] = React.useState(false);
   const [selectedMovie, setSelectedMovie] = React.useState({
     backdrop_path: "",
@@ -27,12 +27,12 @@ export default function Slider(props: any) {
 
   return (
     <div>
-      <div className="row">
-        <div className="row__posters">
+      <div className="results">
+        <div className="results__posters">
           {props.movies.map((movie: movie) => (
             <img
               key={movie.id}
-              className="row__poster row__posterLarge"
+              className="results__poster results__posterLarge"
               src={
                 movie.poster_path === null
                   ? defaultPoster

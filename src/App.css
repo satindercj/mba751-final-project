@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Lobster");
+
 .App {
   text-align: center;
 }
@@ -6,4 +8,10 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+  color: "#05a3d2";
+}
+
+body {
+  font-family: "Lobster";
+  font-size: 21px;
 }
