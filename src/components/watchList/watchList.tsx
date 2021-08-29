@@ -2,8 +2,11 @@ import { useAppSelector } from "../../app/hooks";
 import { selectMovies } from "../../features/watchListSlice";
 import WatchListResults from "./watchListResults/watchListResults";
 
-function WatchList() {
+function WatchList(props: any) {
+  const { bottomNavChange } = props;
   const movies = useAppSelector(selectMovies);
+
+  bottomNavChange("Watch List");
 
   return (
     <div>

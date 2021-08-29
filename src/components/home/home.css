@@ -1,3 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Acme");
+
 .home {
   margin-bottom: 3.5rem;
+}
+.popularTitle {
+  position: relative;
+}
+
+.watchListButtonDiv {
+  position: absolute;
+  left: 0;
+  top: 38px;
+  padding-left: 15px;
+}
+
+.watchListButtonDiv .watchListButton {
+  color: #fff;
+  border-color: #05a3d2;
+  background-color: #05a3d2;
+  font-family: "Acme";
+  font-size: 1rem;
+}
+
+.searchButtonDiv {
+  position: absolute;
+  right: 0;
+  top: 38px;
+  padding-right: 15px;
+}
+
+.searchButton {
+  color: #fff;
+  border-color: #05a3d2;
+  background-color: #05a3d2;
+  font-family: "Acme";
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .searchButtonDiv .watchListButtonDiv {
+    display: none;
+  }
+
+  .searchButtonDiv {
+    display: none;
+  }
 }

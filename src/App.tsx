@@ -31,10 +31,20 @@ function App() {
       <Router>
         <div>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/search" component={Search} />
-            <Route path="/watch-list" component={WatchList} />
-            <Route component={Home} />
+            <Route
+              exact
+              path="/"
+              component={() => <Home bottomNavChange={setValue} />}
+            />
+            <Route
+              path="/search"
+              component={() => <Search bottomNavChange={setValue} />}
+            />
+            <Route
+              path="/watch-list"
+              component={() => <WatchList bottomNavChange={setValue} />}
+            />
+            <Route component={() => <Home bottomNavChange={setValue} />} />
           </Switch>
         </div>
 

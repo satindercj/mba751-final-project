@@ -1,10 +1,12 @@
 import React from "react";
 import axios from "axios";
-// import { GridList, GridListTile, GridListTileBar } from "@material-ui/core";
 import "./home.css";
 import Slider from "../slider/slider";
-import { Dialog } from "@material-ui/core";
+import { Button, Dialog } from "@material-ui/core";
 import Loader from "react-loader-spinner";
+import SearchIcon from "@material-ui/icons/Search";
+import WatchListIcon from "@material-ui/icons/Movie";
+import { Link } from "react-router-dom";
 
 export interface movie {
   backdrop_path: string;
@@ -16,7 +18,9 @@ export interface movie {
   overview: string;
 }
 
-interface IProps {}
+interface IProps {
+  bottomNavChange: any;
+}
 
 interface IState {
   apiUrl: string;
@@ -33,6 +37,8 @@ interface IState {
 class Home extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
+
+    this.props.bottomNavChange("Home");
 
     this.state = {
       apiUrl: "https://api.themoviedb.org/3",
@@ -128,7 +134,49 @@ class Home extends React.Component<IProps, IState> {
             }
           />
         </Dialog>
-        <h1>Popular Movies</h1>
+
+        <div className="popularTitle">
+          <h1>Popular Movies</h1>
+        </div>
+
+        <div className="watchListButtonDiv">
+          <Button
+            variant="contained"
+            className="watchListButton"
+            style={{
+              color: "#fff",
+              borderColor: "#05a3d2",
+              backgroundColor: "#05a3d2",
+              fontFamily: "Acme",
+              fontSize: "1rem",
+            }}
+            component={Link}
+            to="/watch-list"
+          >
+            <WatchListIcon />
+            <span style={{ paddingLeft: 5 }}>Watch List</span>
+          </Button>
+        </div>
+
+        <div className="searchButtonDiv">
+          <Button
+            variant="contained"
+            className="searchButton"
+            style={{
+              color: "#fff",
+              borderColor: "#05a3d2",
+              backgroundColor: "#05a3d2",
+              fontFamily: "Acme",
+              fontSize: "1rem",
+            }}
+            component={Link}
+            to="/search"
+          >
+            <SearchIcon />
+            <span style={{ paddingLeft: 5 }}>Search Movies</span>
+          </Button>
+        </div>
+
         {!this.state.popularLoading && (
           <Slider movies={this.state.popularMovies} />
         )}

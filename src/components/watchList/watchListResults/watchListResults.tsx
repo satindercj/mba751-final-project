@@ -58,7 +58,7 @@ export default function WatchListResults(props: any) {
           </div>
         </div>
       ) : (
-        <h2 className="defaultPrompt">No movies added to Watch List.</h2>
+        <h2 className="defaultPrompt">No movies added to your Watch List.</h2>
       )}
     </div>
   );

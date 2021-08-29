@@ -40,7 +40,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function Search() {
+function Search(props: any) {
+  const { bottomNavChange } = props;
   const classes = useStyles();
 
   const [searchText, setSearchText] = React.useState("");
@@ -56,6 +57,8 @@ function Search() {
     },
   ]);
   const [loading, setLoading] = React.useState(false);
+
+  bottomNavChange("Search");
 
   const apiData = {
     apiUrl: "https://api.themoviedb.org/3",
