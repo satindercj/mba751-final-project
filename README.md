@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+## Live Demo
+
+Click on this link for Live Demo: https://mba751-final-project.web.app/
+
 ## Available Scripts
 
 In the project directory, you can run:
